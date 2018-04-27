@@ -79,11 +79,11 @@ volatile uint32_t 	currentTicks	= 0,		//value of SYSTICK
  * 			10 * 3C   //5 minutes
  * 			00 * B0   //17.6 seconds
  */
-static __attribute__((section("PATTERN_1"))) const volatile uint32_t pattern1 [200];
-static __attribute__((section("PATTERN_2"))) const volatile uint32_t pattern2 [200];
-static __attribute__((section("PATTERN_3"))) const volatile uint32_t pattern3 [200];
-static __attribute__((section("PATTERN_4"))) const volatile uint32_t pattern4 [200];
-static __attribute__((section("PATTERN_5"))) const volatile uint32_t pattern5 [200];
+static __attribute__((section("PATTERN_1"))) const volatile uint32_t pattern1 [250];
+static __attribute__((section("PATTERN_2"))) const volatile uint32_t pattern2 [250];
+static __attribute__((section("PATTERN_3"))) const volatile uint32_t pattern3 [250];
+static __attribute__((section("PATTERN_4"))) const volatile uint32_t pattern4 [250];
+static __attribute__((section("PATTERN_5"))) const volatile uint32_t pattern5 [250];
 
 const volatile uint32_t *patternAddess[5] = {&pattern1,&pattern2,&pattern3,&pattern4,&pattern5};
 uint8_t patternIndex = 0;
