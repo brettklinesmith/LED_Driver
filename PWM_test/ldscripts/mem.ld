@@ -13,13 +13,13 @@
 
 MEMORY
 {
-  FLASH (rx) : ORIGIN = 0x08000000, LENGTH = 123K
+  FLASH (rx) : ORIGIN = 0x08000000, LENGTH = 123K	//5k removed for patterns
   RAM (xrw)  : ORIGIN = 0x20000000, LENGTH = 20K
-  PAT_1(rw)  : ORIGIN = 0x0801EC00, LENGTH = 1K
-  PAT_2(rw)  : ORIGIN = 0x0801F000, LENGTH = 1K
-  PAT_3(rw)  : ORIGIN = 0x0801F400, LENGTH = 1K
-  PAT_4(rw)  : ORIGIN = 0x0801F800, LENGTH = 1K
-  PAT_5(rw)  : ORIGIN = 0x0801FC00, LENGTH = 1K
+  PAT_1(rw)  : ORIGIN = 0x0801EC00, LENGTH = 1K		//Pattern 1
+  PAT_2(rw)  : ORIGIN = 0x0801F000, LENGTH = 1K		//Pattern 2
+  PAT_3(rw)  : ORIGIN = 0x0801F400, LENGTH = 1K		//Pattern 3
+  PAT_4(rw)  : ORIGIN = 0x0801F800, LENGTH = 1K		//Pattern 4
+  PAT_5(rw)  : ORIGIN = 0x0801FC00, LENGTH = 1K		//Pattern 5
 
   /*
    * Optional sections; define the origin and length to match
@@ -42,6 +42,9 @@ MEMORY
  *  MEMORY_ARRAY (xrw)  : ORIGIN = 0x20002000, LENGTH = 32
  */
 
+/* This section connects the pages of memory declared above to
+ * attibute names that can be used in the body of the program.
+ */
 SECTIONS
 {
 	.PAT_1 (NOLOAD):
